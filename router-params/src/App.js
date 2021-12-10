@@ -15,18 +15,22 @@ export default function App() {
         [
             "Netflix",
             "https://upload.wikimedia.org/wikipedia/commons/6/69/Netflix_logo.svg",
+            "pr",
         ],
         [
             "HBO Max",
             "https://upload.wikimedia.org/wikipedia/commons/1/17/HBO_Max_Logo.svg",
+            "hb",
         ],
         [
             "Hulu",
             "https://upload.wikimedia.org/wikipedia/commons/e/e4/Hulu_Logo.svg",
+            "hu",
         ],
         [
             "Prime Video",
             "https://upload.wikimedia.org/wikipedia/commons/f/f1/Prime_Video.png",
+            "pr",
         ],
     ];
     return (
@@ -37,7 +41,7 @@ export default function App() {
                     {urls.map((url) => {
                         return (
                             <Link to={`/${url[0]}`} style={{ padding: 5 }}>
-                                <img src={url[1]} />
+                                <img className={url[2]} src={url[1]} />
                             </Link>
                         );
                     })}
